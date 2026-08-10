@@ -5,7 +5,7 @@
 // reference them in vite.config.js define{} to avoid committing hashes to source.
 
 export const USERNAME_HASH = import.meta.env.VITE_USERNAME_HASH ||
-  'ad15e8b1e00bdf1b72129f8152cca4c12e5880c381d3da03773714959bd458ab'
+  'ee510d1a07ac7e6491ea191cd1918ea553ed2a358c8a0a04c1b90bd89222c314'
 
 export const PASSWORD_HASH = import.meta.env.VITE_PASSWORD_HASH ||
   '6404b98400919dcb1807f57fa3dd2b4eead57045f66d313f738301d8ffbc2def'
