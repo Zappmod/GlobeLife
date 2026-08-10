@@ -1,0 +1,264 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; background: #ffffff; color: #1f2328; max-width: 760px; margin: 0 auto; padding: 32px 24px 48px; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  h2 { font-size: 16px; font-weight: 700; margin: 32px 0 8px; color: #1f2328; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  h3 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1f2328; }
+  h4 { font-size: 13px; font-weight: 600; margin: 16px 0 4px; color: #57606a; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 8px 0 10px 24px; }
+  li { margin-bottom: 4px; }
+  .subtitle { color: #57606a; font-size: 13px; margin-bottom: 28px; }
+  .change-card { background: #f7f8fa; border: 1px solid #e5e7eb; border-left: 4px solid #3b82d4; border-radius: 6px; padding: 14px 16px; margin: 12px 0 20px; }
+  .change-card .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #57606a; margin-bottom: 6px; }
+  .change-card .old { color: #cf222e; text-decoration: line-through; font-style: italic; }
+  .change-card .new { color: #116329; font-weight: 600; }
+  .paste-block { background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 6px; padding: 20px 20px; margin: 12px 0 24px; }
+  .paste-block code, code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12.5px; background: #f0f2f5; padding: 2px 5px; border-radius: 3px; color: #0550ae; }
+  .paste-block pre { background: #f0f2f5; border: 1px solid #e5e7eb; border-radius: 4px; padding: 12px 14px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; white-space: pre-wrap; word-break: break-word; margin: 8px 0; color: #1f2328; }
+  .tip { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 10px 14px; margin: 10px 0; font-size: 13px; }
+  .tip strong { color: #1d4ed8; }
+  .important { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; padding: 10px 14px; margin: 10px 0; font-size: 13px; }
+  .important strong { color: #c2410c; }
+  .img-placeholder { border: 1px dashed #d1d5db; background: #f9fafb; border-radius: 4px; padding: 10px 14px; font-size: 12px; color: #57606a; margin: 10px 0; font-style: italic; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 20px 0; }
+  .section-num { display: inline-block; background: #3b82d4; color: #fff; font-size: 11px; font-weight: 700; border-radius: 3px; padding: 2px 7px; margin-right: 6px; }
+  footer { margin-top: 48px; padding-top: 12px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 11px; color: #57606a; }
+</style>
+</head>
+<body>
+
+<h1>DOCX Edit Guide</h1>
+<p class="subtitle">All edits needed to incorporate <strong>Lab 3: Application Discovery &amp; Understanding</strong> into the Word document. Work top to bottom.</p>
+
+
+<h2><span class="section-num">1</span> Overview section — update paragraph &amp; flowchart</h2>
+
+<h3>1a. Replace the intro paragraph</h3>
+<div class="change-card">
+  <div class="label">Old text</div>
+  <p class="old">This guide walks through six hands-on labs using IBM Bob Premium for Z inside VS Code. Complete the labs in order — each one builds on the setup completed in the previous section.</p>
+  <div class="label" style="margin-top:10px">Replace with</div>
+  <p class="new">This guide walks through eight hands-on labs using IBM Bob Premium for Z inside VS Code. Complete the labs in order — each one builds on the setup completed in the previous section.</p>
+</div>
+
+<h3>1b. Replace the Mermaid flowchart</h3>
+<p>Find the <code>flowchart TD</code> diagram in the Overview and replace the entire block with:</p>
+<div class="paste-block">
+<pre>```{mermaid}
+flowchart TD
+    A[Lab 1 — Lab Setup\nScan workspace · Init Agent.md · Data Dictionary] --&gt; B[Lab 2 — Technical Design\nGenerate comprehensive technical design document]
+    B --&gt; C[Lab 3 — Application Discovery &amp; Understanding\nCall graphs · DB2 access · Flow charts · Complexity · Variable usage]
+    C --&gt; D[Lab 4 — Impact Analysis\nAnalyze field change impact · Implement the change]
+    D --&gt; E[Lab 5 — Refactoring\nIdentify business rules · Extract services]
+    E --&gt; F[Lab 6 — Spec-Driven Code Gen\nGenerate COBOL from specification]
+    F --&gt; G[Lab 7 — UI Modernization\nCICS green screens to modern web]
+    G --&gt; H[Lab 8 — COBOL to Java Modernization\nConvert COBOL to Java 21 Spring Boot]
+```</pre>
+</div>
+
+
+<h2><span class="section-num">2</span> Renumber existing Labs 3 → 7 to Labs 4 → 8</h2>
+<p>After inserting the new section, do a find-and-replace in Word for the following (in order):</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin:10px 0 20px">
+  <thead>
+    <tr style="background:#f7f8fa;border-bottom:2px solid #e5e7eb">
+      <th style="text-align:left;padding:8px 12px;border:1px solid #e5e7eb">Find</th>
+      <th style="text-align:left;padding:8px 12px;border:1px solid #e5e7eb">Replace with</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 7: COBOL to Java</td><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 8: COBOL to Java</td></tr>
+    <tr><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 6: UI Modernization</td><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 7: UI Modernization</td></tr>
+    <tr><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 5: Spec-Driven COBOL</td><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 6: Spec-Driven COBOL</td></tr>
+    <tr><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 4: Refactoring</td><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 5: Refactoring</td></tr>
+    <tr><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 3: Impact Analysis</td><td style="padding:7px 12px;border:1px solid #e5e7eb">Lab 4: Impact Analysis</td></tr>
+  </tbody>
+</table>
+<p style="font-size:13px;color:#57606a"><em>Do these replacements highest-to-lowest to avoid double-incrementing.</em></p>
+
+
+<h2><span class="section-num">3</span> Insert new Lab 3 section — paste after Lab 2</h2>
+<p>Paste the block below immediately after the "Start a New Chat" callout that closes Lab 2 (before the old Lab 3: Impact Analysis heading).</p>
+
+<div class="paste-block">
+
+<h3 style="margin:0 0 4px">--- (horizontal rule)</h3>
+
+<h3 style="margin:14px 0 4px">## Lab 3: Application Discovery &amp; Understanding</h3>
+
+<pre>&gt; **Prerequisites:** Complete Lab 1 (Lab Setup) before starting this lab
+&gt;
+&gt; **Code Set:** Any COBOL workspace — recommended code: `Sample Code`
+&gt;
+&gt; **Duration:** 30 minutes
+&gt;
+&gt; **Difficulty:** Beginner</pre>
+
+<hr />
+
+<h3>Overview</h3>
+<p>In this lab, you will use Bob to explore and understand the GENAPP application — its program relationships, data flow, internal logic, and overall structure. Rather than following a fixed sequence, you will work through a set of guided prompts organised by topic. Each section introduces a different lens for understanding the codebase. Use these prompts as a starting point and write your own variations to dig deeper into areas that interest you.</p>
+
+<h3>Learning Objectives</h3>
+<p>By the end of this lab, you will be able to:</p>
+<ul>
+  <li>Navigate the GENAPP application using Bob's analysis capabilities</li>
+  <li>Generate call graphs, flow diagrams, and dependency trees</li>
+  <li>Explore variable data flow and understand how data moves between programs</li>
+  <li>Use Bob to identify complexity hotspots across the codebase</li>
+  <li>Formulate your own prompts to investigate areas of interest</li>
+</ul>
+
+<hr />
+
+<h3>Actions</h3>
+<ol>
+  <li>Ensure you have completed the workspace scan and Agent.md initialisation from Lab 1.</li>
+  <li>Ensure you are in <strong>Z Architect</strong> mode for all exercises in this lab.</li>
+  <li>Copy the prompt from the code block and paste it directly into the Bob chat.</li>
+  <li>Approve any tool requests that appear — or enable <strong>Auto Approve</strong> in the <strong>Permissions</strong> dropdown for longer-running prompts.</li>
+  <li>Review the output, then continue to the next exercise or try a variation of your own.</li>
+</ol>
+
+<div class="tip"><strong>Tip</strong><br />Start a fresh chat between unrelated exercises to avoid context from one analysis carrying into the next. Click the <strong>+</strong> button at the top of the chat panel to open a new chat.</div>
+
+<hr />
+
+<h3>Exercise: Call Graphs</h3>
+<p>Call graphs show which programs invoke which other programs across the entire application. They are useful for understanding the overall structure of the codebase, identifying entry points, and tracing execution paths from a starting program all the way down to its deepest dependencies.</p>
+
+<div class="important"><strong>Before You Begin</strong><br />Ensure you are in <strong>Z Architect</strong> mode before starting this exercise.</div>
+
+<h4>1. Full application call graph</h4>
+<pre>Generate a call graph for the entire GENAPP application showing which programs call which other programs.</pre>
+<div class="img-placeholder">📷 Image: understand-1.png — Bob generates a full GENAPP call graph with a visual diagram and a call graph summary table</div>
+
+<h4>2. Call chain from a specific program</h4>
+<pre>Show me the full call chain starting from LGACDB01 down to every program it directly or transitively calls.</pre>
+<div class="img-placeholder">📷 Image: understand-2.png — Bob generates a full transitive call chain tree from LGACDB01 with a call chain table</div>
+
+<h4>3. Entry point discovery</h4>
+<pre>Which programs in the codebase are never called by any other program? Show them as entry points.</pre>
+<div class="img-placeholder">📷 Image: understand-3.png — Bob identifies all GENAPP entry points with a diagram and entry point summary table</div>
+
+<h4>4. Scoped call graph — customer operations</h4>
+<pre>Draw a call graph for the adding a customer only — and their callees.</pre>
+<div class="img-placeholder">📷 Image: understand-4.png — Bob generates a scoped call graph for the Add Customer flow with a narrative breakdown</div>
+
+<h4>5. Reverse call graph</h4>
+<pre>Which programs call LGSTSQ? Show me the reverse call graph for the error logging utility.</pre>
+<div class="img-placeholder">📷 Image: understand-5.png — Bob generates a reverse call graph for LGSTSQ showing all callers and a call summary table</div>
+
+<hr />
+
+<h3>Exercise: DB2 Access Graphs</h3>
+<p>DB2 access graphs map which programs read from or write to which database tables. They help you understand the data access layer of the application — which programs own which tables, where inserts and updates happen, and which programs would be at risk from a schema change.</p>
+
+<div class="important"><strong>Before You Begin</strong><br />Ensure you are in <strong>Z Architect</strong> mode before starting this exercise.</div>
+
+<h4>1. Table insert graph</h4>
+<pre>Draw a SQL access graph for LGAPDB01 showing all tables it inserts into.</pre>
+<div class="img-placeholder">📷 Image: understand-6.png — Bob generates a SQL access graph for LGAPDB01 showing all tables it inserts into with a table access summary</div>
+
+<h4>2. Schema change impact</h4>
+<pre>I am researching what programs would be impacted if the policy table schema was changed. Can you show me a graph that represents this?</pre>
+<div class="tip"><strong>Tip</strong><br />Bob may ask clarifying questions before generating the graph. Select from the options presented or type your own clarification to guide the output.</div>
+<div class="img-placeholder">📷 Image: understand-7.png — Bob generates an impact graph for a POLICY table schema change with a directly impacted components summary</div>
+
+<hr />
+
+<h3>Exercise: Flow Charts</h3>
+<p>Paragraph flow diagrams visualize the internal control flow of a COBOL program — which paragraphs PERFORM which other paragraphs and in what order. They are the equivalent of a function call graph but scoped to a single program, making it easier to understand program logic without reading every line of code.</p>
+
+<div class="important"><strong>Before You Begin</strong><br />Ensure you are in <strong>Z Architect</strong> mode before starting this exercise.</div>
+
+<h4>1. Internal control flow graph</h4>
+<pre>Draw the internal control flow graph for LGAPDB01 showing which paragraphs PERFORM which other paragraphs.</pre>
+<div class="img-placeholder">📷 Image: understand-11.png — Bob generates an internal control flow graph for LGAPDB01 with a graph summary table listing each paragraph's role</div>
+
+<h4>2. Paragraph flow from MAINLINE</h4>
+<pre>Show me the paragraph flow for LGUPDB01 — which paragraphs does MAINLINE call?</pre>
+<div class="img-placeholder">📷 Image: understand-12.png — Bob generates the MAINLINE paragraph flow for LGUPDB01 with a direct calls table</div>
+
+<h4>3. Dead paragraph detection</h4>
+<pre>Which paragraphs in LGTESTC1 are never PERFORMed by any other paragraph? Identify dead paragraphs.</pre>
+
+<h4>4. Execution order diagram</h4>
+<pre>Generate a paragraph flow diagram for LGACDB01 showing the order of execution from MAINLINE.</pre>
+<div class="img-placeholder">📷 Image: understand-14.png — Bob generates a paragraph execution flow diagram for LGACDB01 with an execution summary table</div>
+
+<h4>5. Most-called paragraph</h4>
+<pre>Which paragraph in LGAPDB01 is called from the most places? Show its callers as a graph.</pre>
+<div class="img-placeholder">📷 Image: understand-15.png — Bob identifies WRITE-ERROR-MESSAGE as the most-called paragraph in LGAPDB01 with a callers table and call graph</div>
+
+<hr />
+
+<h3>Exercise: Complexity Report</h3>
+<p>Cyclomatic complexity measures the number of independent paths through a program — the higher the score, the harder the program is to test and maintain. A complexity heatmap across the whole application quickly surfaces the programs most likely to contain bugs, resist change, or require the most attention during modernization.</p>
+
+<div class="important"><strong>Before You Begin</strong><br />Ensure you are in <strong>Z Architect</strong> mode before starting this exercise.</div>
+
+<h4>1. Application-wide complexity heatmap</h4>
+<pre>Rank all GENAPP programs by cyclomatic complexity and show a heatmap of the top 10 most complex.</pre>
+<div class="img-placeholder">📷 Image: understand-16.png — Bob generates a cyclomatic complexity bar chart and paragraph-level heatmap for the top GENAPP programs</div>
+
+<hr />
+
+<h3>Exercise: Variable Usage</h3>
+<p>Variable data flow analysis traces how a specific field moves through the application — where it is assigned, where it is read, and which paragraphs or programs it passes through. This is especially useful for understanding COMMAREA fields and shared data structures that span multiple programs.</p>
+
+<div class="important"><strong>Before You Begin</strong><br />Ensure you are in <strong>Z Architect</strong> mode before starting this exercise.</div>
+
+<h4>1. Cross-program data flow</h4>
+<pre>Trace the data flow of CA-CUSTOMER-NUM across all programs — where is it written and where is it read?</pre>
+<div class="img-placeholder">📷 Image: understand-17.png — Bob generates a cross-program data flow summary for CA-CUSTOMER-NUM with a detailed flow by program table</div>
+
+<h4>2. Variable flow within a program</h4>
+<pre>Show me a variable data flow graph for DB2-CUSTOMERNUM-INT inside LGACDB01.</pre>
+<div class="img-placeholder">📷 Image: understand-18.png — Bob generates a data flow diagram for DB2-CUSTOMERNUM-INT with an annotated flow walkthrough table</div>
+
+<h4>3. Inter-paragraph data flow</h4>
+<pre>Which variables in LGAPDB01 are written in one paragraph and read in another? Show the data flow between paragraphs.</pre>
+<div class="img-placeholder">📷 Image: understand-19.png — Bob generates an inter-paragraph data flow diagram for LGAPDB01 with key observations about variable coupling</div>
+
+<h4>4. Return code trace</h4>
+<pre>Trace CA-RETURN-CODE across the entire application — which programs set it and which programs check it?</pre>
+<div class="img-placeholder">📷 Image: understand-20.png — Bob generates an application-wide trace of CA-RETURN-CODE with a return code reference table and program-by-program breakdown</div>
+
+<h4>5. Policy number lifecycle</h4>
+<pre>Show me the data flow for CA-POLICY-NUM from the moment it is assigned in INSERT-POLICY through every paragraph that uses it.</pre>
+<div class="img-placeholder">📷 Image: understand-21.png — Bob generates a CA-POLICY-NUM data flow diagram for LGAPDB01 with a step-by-step narrative table</div>
+
+<hr />
+
+<h3>Key Takeaways</h3>
+<ul>
+  <li><strong>Z Architect mode</strong> is the right mode for all analysis, graphing, and exploration prompts — it has access to the workspace metadata database built during setup</li>
+  <li><strong>Reverse graphs</strong> (who calls X? who includes Y?) are just as useful as forward graphs when tracing impact</li>
+  <li><strong>Variable flow</strong> prompts are particularly powerful for understanding COMMAREA fields shared across programs</li>
+  <li>Every prompt here is a starting point — modify the program names, field names, or scope to explore any part of the application that interests you</li>
+</ul>
+
+<div class="tip"><strong>Start a New Chat</strong><br />Please select the <strong>+</strong> sign at the top of the chat window to start a new session before moving to the next lab.</div>
+
+<hr />
+</div>
+
+
+<h2>Summary of all changes</h2>
+<ul>
+  <li>Overview paragraph: "six" → "eight"</li>
+  <li>Flowchart: add Lab 3 node, extend to Lab 8</li>
+  <li>Renumber old Lab 3–7 → Lab 4–8 (use find-and-replace, highest first)</li>
+  <li>Insert new Lab 3 section between Lab 2 and the (now) Lab 4 Impact Analysis</li>
+  <li>Insert the 21 <strong>understand-*.png</strong> screenshots at the marked image placeholders</li>
+</ul>
+
+<footer>Made with IBM Bob</footer>
+</body>
+</html>
