@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header.jsx'
-import HubPage from './components/HubPage.jsx'
 import WorkshopPage from './components/WorkshopPage.jsx'
 import LabView from './components/LabView.jsx'
 import DecksPage from './components/DecksPage.jsx'
@@ -21,7 +20,7 @@ export default function App() {
     <BrowserRouter basename="/GlobeLife">
       <Header />
       <Routes>
-        <Route path="/" element={<HubPage />} />
+        <Route path="/" element={<Navigate to="/workshop" replace />} />
         <Route path="/workshop" element={<WorkshopPage />} />
         <Route path="/workshop/lab/:labId" element={<LabView />} />
         <Route path="/decks" element={<DecksPage />} />
